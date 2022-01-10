@@ -1,7 +1,7 @@
 {
-  "homepage" : "https://compeng-bue.github.io/ammzon-com",
+  "homepage" : "https://compeng-bue.github.io/",
   "name": "ammzon-com",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
