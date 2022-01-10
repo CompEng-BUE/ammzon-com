@@ -94,11 +94,14 @@ export class ProductsService {
     public search_text = new BehaviorSubject('');
 
     constructor() {
-        // localStorage.setItem('users', JSON.stringify([new User]));
+        if(localStorage.getItem('users') == null || localStorage.getItem('users') == undefined)
+            localStorage.setItem('users', JSON.stringify([new User]));
+            
         this.users = JSON.parse(localStorage.getItem('users')!)
 
         // localStorage.setItem('current_user', JSON.stringify(0));
-        this.current_user_index = JSON.parse(localStorage.getItem('current_user')!)
+        // this.current_user_index = JSON.parse(localStorage.getItem('current_user')!)
+        this.current_user_index = 0
 
         this.current_user = this.users[this.current_user_index];
     }
